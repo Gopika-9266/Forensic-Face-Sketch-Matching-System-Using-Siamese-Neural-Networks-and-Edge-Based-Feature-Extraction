@@ -1,68 +1,261 @@
-# Forensic Face Sketch Matching System Using Siamese Neural Network and Edge-based Feature Extraction 
 
-A deep learning-based system designed to assist criminal investigations by automatically matching hand-drawn forensic sketches with real photographs using Siamese Neural Networks and Edge-Based Feature Extraction.
+# 🕵️ Forensic Face Sketch Recognition System
 
-## 📌 Project Overview
-Forensic investigations often rely on hand-drawn sketches to identify suspects. However, matching these sketches to real police databases is difficult due to the "modality gap"—sketches lack the texture, color, and lighting details of photos.
+An AI-powered web application that identifies suspects from forensic face sketches by comparing them with a criminal image database and automatically generates investigation reports.
 
-This project bridges that gap using a **Siamese Neural Network (SNN)** combined with **Edge-Based Feature Extraction**. Instead of traditional classification, the model learns a "similarity metric" to determine if a sketch and a photo belong to the same person.
+---
 
-## 🚀 Key Features
-* **Cross-Modal Matching:** Successfully matches grayscale sketches to RGB photos.
-* **Edge-Based Feature Extraction:** Uses Canny/Sobel edge detection to focus on facial contours rather than lighting or color.
-* **Siamese Architecture:** Two identical CNN branches share weights to generate embeddings for comparison.
-* **Similarity Scoring:** Outputs a precise distance score (Euclidean/Cosine) to rank potential matches.
-* **Robustness:** Reduces the impact of lighting variations and noise.
+## 📌 Overview
 
-## 🛠️ Tech Stack
-* **Language:** Python 3.x
-* **Deep Learning:** TensorFlow / Keras
-* **Computer Vision:** OpenCV (cv2)
-* **Data Handling:** NumPy, Pandas, Matplotlib
-* **Interface (Optional):** Flask for web deployment
+The **Forensic Face Sketch Recognition System** is a web-based application developed to support criminal investigations by automating the process of identifying suspects from forensic sketches.
 
-## 🏗️ System Architecture
-The system follows this pipeline:
-1.  **Input:** User uploads a Sketch and a Candidate Photo.
-2.  **Preprocessing:** Images are resized, normalized, and converted to grayscale.
-3.  **Edge Extraction:** Structural lines are extracted to align the modalities.
-4.  **Siamese Network:** Both images pass through shared CNN layers to create 128-D embeddings.
-5.  **Comparison:** The system calculates the distance between embeddings.
-    * *Low Distance* = Match
-    * *High Distance* = No Match
+Traditionally, investigators manually compare hand-drawn sketches with thousands of criminal records, making the process slow and error-prone. This system simplifies that process by allowing users to upload a forensic sketch, automatically searching the criminal image database for the closest match, displaying the similarity accuracy, and generating an investigation report that is sent directly via email.
 
-## 📊 Performance
-* **Accuracy:** ~85–92% (depending on dataset quality).
-* **False Non-Match Rate (FNMR):** Significantly reduced using edge features.
-* **Inference Time:** Fast enough for real-time forensic usage.
+The application combines **Computer Vision**, **Deep Learning**, and **Web Technologies** to provide a faster, smarter, and more reliable approach to forensic face recognition.
 
-## 💻 Installation & Usage
+---
 
-### Prerequisites
-* Python 3.8+
-* TensorFlow
-* OpenCV
+## 🎯 Objectives
 
-### 1. Clone the Repository
+- Automate forensic face sketch identification.
+- Reduce the time required for suspect identification.
+- Compare uploaded sketches with stored criminal images.
+- Display the best matching face with similarity accuracy.
+- Generate investigation reports automatically.
+- Send the final report through email notification.
+
+---
+
+## ✨ Features
+
+- 🔐 Secure Login System
+- 📤 Upload Forensic Face Sketch
+- 🧠 AI-Based Face Recognition
+- 🗄️ Criminal Database Search
+- 🎯 Best Match Detection
+- 📊 Matching Accuracy Calculation
+- 📧 Automated Email Notification
+- 🌐 Interactive Web Interface
+
+---
+
+## 🛠️ Technologies Used
+
+| Technology | Purpose |
+|------------|---------|
+| Python | Backend Development |
+| Flask | Web Framework |
+| HTML | Web Pages |
+| CSS | User Interface |
+| JavaScript | Client-Side Functionality |
+| TensorFlow / Keras | Deep Learning |
+| OpenCV | Image Processing |
+| NumPy | Numerical Computing |
+| Pandas | Data Handling |
+| Matplotlib | Data Visualization |
+| SMTP | Email Notification |
+
+---
+
+# 🔄 System Workflow
+
+```text
+User Login
+     │
+     ▼
+Upload Face Sketch
+     │
+     ▼
+Image Preprocessing
+     │
+     ▼
+Face Sketch Recognition
+     │
+     ▼
+Search Criminal Image Database
+     │
+     ▼
+Find Best Matching Image
+     │
+     ▼
+Calculate Similarity Accuracy
+     │
+     ▼
+Display Result
+     │
+     ▼
+Generate Investigation Report
 ```
-git clone [https://github.com/Gopika-9266/Forensic-Face-Sketch-Matching.git](https://github.com/Gopika-9266/Forensic-Face-Sketch-Matching.git)
+
+---
+
+# 📸 Application Screenshots
+
+## 🔐 Login Page
+
+<img width="1600" height="814" alt="login" src="https://github.com/user-attachments/assets/2854f5af-02d5-41a6-b937-74afec1101bb" />
+
+
+---
+
+## 🏠 Home Page
+
+<img width="1600" height="814" alt="home " src="https://github.com/user-attachments/assets/86d4aebb-9369-4f7f-b680-b3f852f68213" />
+
+
+---
+
+## 📤 Upload Face Sketch
+
+<img width="1600" height="808" alt="upload" src="https://github.com/user-attachments/assets/618e9e4e-bcaa-40ad-aeab-99715fbd82aa" />
+
+
+---
+
+## 🔍 Recognition Process
+
+<img width="1600" height="816" alt="analysing" src="https://github.com/user-attachments/assets/41746679-a626-4b26-b1f8-ef109e1ba749" />
+
+
+---
+
+## 🎯 Matching Result
+
+<img width="1600" height="815" alt="match found" src="https://github.com/user-attachments/assets/9283b7f7-645b-4db4-be74-9914dc80fdad" />
+
+
+---
+
+## 📊 Matching Accuracy
+<img width="1600" height="800" alt="matched accuracy" src="https://github.com/user-attachments/assets/79c969e7-3c34-4104-9dbe-9a6aaa565484" />
+
+
+---
+
+
+
+# ⚙️ Installation
+
+### Clone the Repository
+
+```bash
+git clone https://github.com/Gopika-9266/Forensic-Face-Sketch-Matching.git
 
 cd Forensic-Face-Sketch-Matching
 ```
 
-### 2. Install Dependencies
-```
+---
+
+### Install Dependencies
+
+```bash
 pip install -r requirements.txt
 ```
-### 3. Run the Training Script 
+
+---
+
+### Run the Application
+
+```bash
+python app.py
 ```
-python train_model.py
+
+---
+
+### Open in Browser
+
 ```
-### 4. Test with an Image Pair
+http://127.0.0.1:5000
 ```
-python match_faces.py --sketch "data/test_sketch.jpg" --photo "data/test_photo.jpg"
-```
-## 🔮 Future Scope
-* GAN Integration: Using Generative Adversarial Networks to synthesize realistic photos from sketches.
-* Real-Time Matching: Optimizing for large-scale police databases.
-* Aging & Expression: Improving robustness against age progression.
+
+---
+
+# 🚀 How to Use
+
+### Step 1
+
+Login to the application using valid credentials.
+
+---
+
+### Step 2
+
+Upload the forensic face sketch through the upload page.
+
+---
+
+### Step 3
+
+The uploaded sketch undergoes preprocessing and feature extraction.
+
+---
+
+### Step 4
+
+The system compares the sketch with all stored criminal images.
+
+---
+
+### Step 5
+
+The closest matching face is identified.
+
+---
+
+### Step 6
+
+The similarity accuracy between the sketch and the matched image is calculated.
+
+---
+
+### Step 7
+
+The result is displayed on the screen.
+
+---
+
+### Step 8
+
+An investigation report is generated automatically.
+
+---
+
+
+# 📊 Results
+
+The developed system successfully performs forensic face sketch recognition by comparing uploaded sketches with stored criminal images.
+
+### The system provides:
+
+- ✔️ Secure Authentication
+- ✔️ Sketch Recognition
+- ✔️ Criminal Image Matching
+- ✔️ Similarity Accuracy
+- ✔️ Investigation Report Generation
+- ✔️ Automatic Email Notification
+
+---
+
+# 💡 Advantages
+
+- Faster criminal identification process.
+- Reduces manual comparison effort.
+- User-friendly web interface.
+- Accurate sketch matching.
+- Automated report generation.
+- Efficient email notification system.
+
+---
+
+# 🔮 Future Enhancements
+
+- Real-time sketch recognition.
+- Integration with CCTV surveillance.
+- GAN-based sketch-to-photo generation.
+- Mobile application support.
+- Cloud database integration.
+- Multi-face recognition.
+- Improved recognition for aging and facial expressions.
+
+
+
