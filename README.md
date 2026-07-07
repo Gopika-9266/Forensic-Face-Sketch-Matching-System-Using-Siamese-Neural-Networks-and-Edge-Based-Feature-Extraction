@@ -91,12 +91,6 @@ Generate Investigation Report
 
 # 📸 Application Screenshots
 
-## 🔐 Login Page
-
-<img width="1600" height="814" alt="login" src="https://github.com/user-attachments/assets/2854f5af-02d5-41a6-b937-74afec1101bb" />
-
-
----
 
 ## 🏠 Home Page
 
